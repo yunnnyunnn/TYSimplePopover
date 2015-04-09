@@ -24,21 +24,22 @@ Put the following codes at anywhere you want to present the popover in your view
 
 ``` objective-c
 // Create the popover
-TYSimplePopoverViewController * simplePopover = [[TYSimplePopoverViewController alloc] initWithTitle:@"TYSimplePopover"
-                                                                                                     message:@"This is where the message shows."
-                                                                                                buttonTitles:[NSArray arrayWithObjects:@"Yes", @"No", @"Destructive", nil]
-                                                                                                       image:nil
-                                                                                            selectionHandler:^(NSInteger selectedIndex) {
-                                                                                                if (selectedIndex == 0) {
-                                                                                                    
-                                                                                                    NSLog(@"YES");
-                                                                                                    
-                                                                                                } else if (selectedIndex == 1){
-                                                                                                    NSLog(@"No");
-                                                                                                }
-                                                                                                else {
-                                                                                                    NSLog(@"Destructive");
-                                                                                                }
+TYSimplePopoverViewController * simplePopover = [[TYSimplePopoverViewController alloc] initWithTitle:@"TYSimplePopover" message:@"This is where the message shows." buttonTitles:[NSArray arrayWithObjects:@"Yes", @"No", @"Destructive", nil] image:nil selectionHandler:^(NSInteger selectedIndex) {
+
+    if (selectedIndex == 0) {
+
+        NSLog(@"YES");
+
+    } else if (selectedIndex == 1){
+
+        NSLog(@"No");
+    }
+
+    else {
+
+        NSLog(@"Destructive");
+
+    }
                                                                                             }];
 
 // set destructive button index (optional)
@@ -52,18 +53,17 @@ simplePopover.destructiveButtonIndex = 2;
 With Image:
 
 ```objective-c
-TYSimplePopoverViewController * simplePopoverWithImage = [[TYSimplePopoverViewController alloc] initWithTitle:@"TYSimplePopover"
-                                                                                                              message:@"This is where the message shows."
-                                                                                                         buttonTitles:[NSArray arrayWithObjects:@"Yes", @"No", nil]
-                                                                                                                image:[UIImage imageNamed:@“YOURIMAGENAME”]
-                                                                                                     selectionHandler:^(NSInteger selectedIndex) {
-                                                                                                         if (selectedIndex == 0) {
-                                                                                                             
-                                                                                                             NSLog(@"YES");
-                                                                                                             
-                                                                                                         } else {
-                                                                                                             NSLog(@"No");
-                                                                                                         }
+TYSimplePopoverViewController * simplePopoverWithImage = [[TYSimplePopoverViewController alloc] initWithTitle:@"TYSimplePopover" message:@"This is where the message shows." buttonTitles:[NSArray arrayWithObjects:@"Yes", @"No", nil] image:[UIImage imageNamed:@“YOURIMAGENAME”] selectionHandler:^(NSInteger selectedIndex) {
+
+    if (selectedIndex == 0) {
+
+         NSLog(@"YES");
+
+    } else {
+
+         NSLog(@"No");
+
+    }
                                                                                                      }];
 ```
 
