@@ -110,6 +110,12 @@ You can customize the following properties of `TYSimplePopover`:
 @property (nonatomic, strong) ViewDidDismissHandler viewDidDismissHandler;
 ```
 
+## Discussion
+
+Pros and Cons on selectedIndex method (in Chinese):
+https://www.facebook.com/groups/iostw/permalink/1033589010001781/
+
+
 ## Contact
 
 Tim Chen
